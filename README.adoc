@@ -5,8 +5,13 @@ Nick Hardiman
 
 The physical machine host2 will be described in mind-numbing detail at https://hardiman.consulting/, assuming I ever have free time ever again.
 
+```
+my workstation --> host2 <-- GitHub 
+```
+
 Run the shell script to kick off the whole process.
 
-* shell script: machine-host2-configure.sh
-* Ansible playbook: machine-host2-configure.yml 
+* shell script to run on host2: machine-host2-configure.sh
+* Ansible playbook for host2: machine-host2-configure.yml 
+* shell script to run on my workstation: machine-workstation-configure.sh
 
