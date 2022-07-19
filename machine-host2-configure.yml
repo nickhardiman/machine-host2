@@ -1,0 +1,11 @@
+---
+- name: configure host2
+  hosts: localhost
+  gather_facts: no
+  become: yes
+  tasks:
+
+  - name: set hostname
+    ansible.builtin.hostname:
+      name: host2.lab.example.com
+

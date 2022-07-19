@@ -1,0 +1,12 @@
+= code to configure host2
+Nick Hardiman 
+:source-highlighter: highlight.js
+:revdate: 19-07-2022
+
+The physical machine host2 will be described in mind-numbing detail at https://hardiman.consulting/, assuming I ever have free time ever again.
+
+Run the shell script to kick off the whole process.
+
+* shell script: machine-host2-configure.sh
+* Ansible playbook: machine-host2-configure.yml 
+
