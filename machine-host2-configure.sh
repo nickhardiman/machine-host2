@@ -1,3 +1,5 @@
+# download and run this script
+#   curl -o - https://raw.githubusercontent.com/nickhardiman/machine-host2/main/machine-host2-configure.sh | bash -x
 
 # SSH security
 # if SSH service on this box is accessible to the Internet
@@ -9,7 +11,7 @@
 # Prerequisites
 
 # install Ansible and git
-sudo dnf install ansible-core git
+sudo dnf install --assumeyes ansible-core git
 
 # install Ansible libvirt collection
 sudo ansible-galaxy collection install community.libvirt --collections-path /usr/share/ansible/collections/ansible_collections
@@ -19,11 +21,11 @@ mkdir -p ~/ansible/roles
 cd ~/ansible/roles
 git clone https://github.com/nickhardiman/libvirt-host.git
 # smoke test
-sudo ansible-playbook libvirt-host/tests/test.yml
+ansible-playbook --ask-become-pass libvirt-host/tests/test.yml
 
 # host config
 git clone https://github.com/nickhardiman/machine-host2.git
 cd machine-host2
-sudo ansible-playbook machine-host2-configure.yml
+ansible-playbook --ask-become-pass machine-host2-configure.yml
 
 
