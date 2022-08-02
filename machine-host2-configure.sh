@@ -1,3 +1,5 @@
+# run
+# log into host2
 # download and run this script
 #   curl -o - https://raw.githubusercontent.com/nickhardiman/machine-host2/main/machine-host2-configure.sh | bash -x
 
@@ -20,12 +22,11 @@ sudo ansible-galaxy collection install community.libvirt --collections-path /usr
 mkdir -p ~/ansible/roles
 cd ~/ansible/roles
 git clone https://github.com/nickhardiman/libvirt-host.git
-# smoke test
-ansible-playbook --ask-become-pass libvirt-host/tests/test.yml
+sudo ansible-playbook libvirt-host/tests/test.yml
 
 # host config
+cd ~/ansible
 git clone https://github.com/nickhardiman/machine-host2.git
 cd machine-host2
 ansible-playbook --ask-become-pass machine-host2-configure.yml
-
 

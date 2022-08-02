@@ -1,3 +1,4 @@
+# log into workstation
 # download and run this script
 #   curl -o - https://raw.githubusercontent.com/nickhardiman/machine-host2/main/machine-workstation-configure.sh | bash -x
 
