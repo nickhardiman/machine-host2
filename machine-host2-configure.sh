@@ -14,7 +14,7 @@
 sudo dnf install --assumeyes ansible-core git
 
 # install Ansible libvirt collection
-sudo ansible-galaxy collection install community.libvirt --collections-path /usr/share/ansible/collections/ansible_collections
+sudo ansible-galaxy collection install community.libvirt --collections-path /usr/share/ansible/collections
 
 # install my libvirt host role
 mkdir -p ~/ansible/roles
