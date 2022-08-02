@@ -3,15 +3,33 @@ Nick Hardiman
 :source-highlighter: highlight.js
 :revdate: 19-07-2022
 
+
+After a fresh install of RHEL, these files configure the new host. 
+
+== run
+
+. Install RHEL on host2.
+. Log into host2. My user account is fine, the Ansible playbook will ask for the root password.
+. Download and run this script
+```
+curl -o - https://raw.githubusercontent.com/nickhardiman/machine-host2/main/machine-host2-configure.sh | bash -x
+```
+
+== what is host2
+
+Host2 is one of the PCs in my home lab.
+It hosts a bunch of VMs (virtual machines). 
 The physical machine host2 will be described in mind-numbing detail at https://hardiman.consulting/, assuming I ever have free time ever again.
 
 ```
 my workstation --> host2 <-- GitHub 
 ```
 
-Run the shell script to kick off the whole process.
-
-* shell script to run on host2: machine-host2-configure.sh
-* Ansible playbook for host2: machine-host2-configure.yml 
+* machine-host2-configure.sh: the shell script to kick off the setup process, run on host2.
+* Ansible playbook for host2, run by the script: machine-host2-configure.yml 
 * shell script to run on my workstation: machine-workstation-configure.sh
+
+== todo
+
+Way too much.
 
