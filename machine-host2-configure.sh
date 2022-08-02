@@ -10,13 +10,18 @@
 #   man sshd_config
 #echo "AuthenticationMethods publickey" >> /etc/ssh/sshd_config
  
-# Prerequisites
-
-# install Ansible and git
-sudo dnf install --assumeyes ansible-core git
-
+# install Ansible
+sudo dnf install --assumeyes ansible-core
 # install Ansible libvirt collection
 sudo ansible-galaxy collection install community.libvirt --collections-path /usr/share/ansible/collections
+
+# install git
+sudo dnf install --assumeyes git
+git config --global user.name "Nick Hardiman"
+git config --global user.email nick@email-domain.com
+git config --global push.default simple
+git config --global credential.helper 'cache --timeout=1200'
+
 
 # install my libvirt host role
 mkdir -p ~/ansible/roles
