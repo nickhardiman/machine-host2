@@ -21,7 +21,7 @@ git config --global user.name "Nick Hardiman"
 git config --global user.email nick@email-domain.com
 git config --global push.default simple
 git config --global credential.helper 'cache --timeout=1200'
-
+git config --global pull.rebase false
 
 # install my libvirt host role
 mkdir -p ~/ansible/roles
