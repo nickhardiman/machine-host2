@@ -23,7 +23,7 @@ git config --global github.user       nick
 git config --global push.default      simple
 # default timeout is 900 seconds (https://git-scm.com/docs/git-credential-cache)
 git config --global credential.helper 'cache --timeout=1200'
-
+git config --global pull.rebase false
 
 # install my libvirt host role
 # I'm not using ansible-galaxy because I am actively developing this role.
