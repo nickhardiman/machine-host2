@@ -26,8 +26,8 @@ my workstation --> host2 <-- GitHub
 ```
 
 * machine-host2-configure.sh: the shell script to kick off the setup process, run on host2.
-* Ansible playbook for host2, run by the script: machine-host2-configure.yml 
-* shell script to run on my workstation: machine-workstation-configure.sh
+* machine-host2-configure.yml: Ansible playbook for host2, run by the script
+* machine-workstation-configure.sh: possibly useless shell script to run on my workstation
 
 == todo
 
